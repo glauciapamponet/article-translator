@@ -29,6 +29,4 @@ def translator_text(text):
 
     request = requests.post(url, params=params, headers=headers, json=body)
     response = request.json()
-    # dump = json.dumps(response, sort_keys=True, ensure_ascii=False, indent=4, separators=(',', ': '))
     return response[0]['translations'][0]['text']
-    # return dump

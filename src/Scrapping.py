@@ -13,7 +13,6 @@ def clean_text(title, text):
     return cleaned
 
 
-# Resolver a questão das tags de imagem, que serão traduzidas se forem mandadas pro tradutor
 def extract_text(url):
     try:
         response = requests.get(url)
