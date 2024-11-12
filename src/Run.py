@@ -1,11 +1,11 @@
 import Scrapping
+import Translator
 
 ARTICLE_URL = "https://dev.to/cloudtech/machine-learning-lifecycle-process-547p"
 
+text = Scrapping.extract_text(ARTICLE_URL)
+translated_text = Translator.translator_text(text)
 
-def translating_article(url):
-    # chamar o tradutor da Azure aqui
-    return Scrapping.extract_text(url)
+with open("../article_ptbr.md", "w", encoding="utf-8") as file:
+    file.write(translated_text)
 
-
-print(translating_article(ARTICLE_URL))
